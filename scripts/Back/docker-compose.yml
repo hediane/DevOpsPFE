@@ -1,0 +1,25 @@
+version: '3.7'
+services:
+ projet:
+  build:
+   context : .\
+   dockerfile : Dockerfile
+  container_name : Partie_Back
+  volumes:
+      - ./:/var/www
+  expose:
+   - "5000"
+  depends_on:
+   - nginx_proxy
+  restart : always
+
+ nginx_proxy:
+  build:
+    context : ./nginx/
+    dockerfile : Dockerfile
+  container_name: nginx_Back
+  volumes:
+   - ./:/var/www
+  ports:
+   - "4001:80" 
+  restart : always
