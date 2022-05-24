@@ -1,6 +1,8 @@
 @Library('pipeline_library') _
 pipeline_library(
     scmurl:'https://github.com/hediane/DevOpsPFE.git' ,
+    DestinationFile: '/aoso/DevOps/source/back'
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     devValidator:'AmaniGHADDAB'
+
 )
