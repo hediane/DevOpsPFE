@@ -1,25 +1,23 @@
 version: '3.7'
 services:
- projet:
+ frontend:
   build:
-   context : .\
+   context : ./DevOpsFront/
    dockerfile : Dockerfile
-  container_name : Partie_Back
-  volumes:
-      - ./:/var/www
+  container_name : Front
   expose:
-   - "5000"
+   - "5001"
   depends_on:
    - nginx_proxy
   restart : always
 
  nginx_proxy:
   build:
-    context : ./nginx/
+    context : ./nginx/front
     dockerfile : Dockerfile
-  container_name: nginx_Back
+  container_name: nginx_Front
   volumes:
    - ./:/var/www
   ports:
-   - "4001:80" 
+   - "4000:80"
   restart : always
