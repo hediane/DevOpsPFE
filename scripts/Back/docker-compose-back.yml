@@ -2,7 +2,7 @@ version: '3.7'
 services:
  backend:
   build:
-   context : ./DevOpsProject/DevOpsProject
+   context : .
    dockerfile : Dockerfile
   container_name : Back
   volumes:
@@ -15,7 +15,7 @@ services:
 
  nginx_proxy:
   build:
-    context : ./nginx/back
+    context : ./nginx
     dockerfile : Dockerfile
   container_name: nginx_Back
   volumes:
