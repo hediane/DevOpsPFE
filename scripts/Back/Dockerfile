@@ -5,7 +5,7 @@ ENV ASPNETCORE_URLS=http://+:5000
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["./DevOpsProject/DevOpsProject/DevOpsProject.csproj", "DevOpsProject/"]
-RUN dotnet restore "DevOpsProject.csproj"
+RUN dotnet restore "./DevOpsProject.csproj"
 COPY . .
 RUN dotnet build "DevOpsProject.csproj" -c Release -o /app/build
 FROM build AS publish
