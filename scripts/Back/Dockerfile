@@ -6,8 +6,8 @@ FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
 COPY ["./DevOpsProject/DevOpsProject/DevOpsProject.csproj", "test/"]
 RUN dotnet restore "test/DevOpsProject.csproj"
-WORKDIR /src/test
 COPY . .
+WORKDIR /src/test
 RUN dotnet build "DevOpsProject.csproj" -c Release -o /app/build
 FROM build AS publish
 RUN dotnet publish "DevOpsProject.csproj" -c Release -o /app/publish
