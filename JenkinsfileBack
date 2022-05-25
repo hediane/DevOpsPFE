@@ -1,7 +1,7 @@
 @Library('pipeline_library') _
 pipeline_library(
     scmurl:'https://github.com/hediane/DevOpsPFE.git' ,
-    DestinationFile: '/var/jenkins_home/workspace/aoso/DevOps/back',
+    DestinationFile: '/var/jenkins_home/workspace/aoso/DevOps/backend',
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     devValidator:'AmaniGHADDAB'
 
