@@ -7,9 +7,9 @@ WORKDIR /src
 COPY ["./DevOpsProject/DevOpsProject/DevOpsProject.csproj", "./DevOpsProject/DevOpsProject/"]
 RUN dotnet restore "DevOpsProject.csproj"
 COPY . .
-RUN dotnet build "/src/DevOpsProject.csproj" -c Release -o /app/build
+RUN dotnet build "DevOpsProject.csproj" -c Release -o /app/build
 FROM build AS publish
-RUN dotnet publish "/src/DevOpsProject.csproj" -c Release -o /app/publish
+RUN dotnet publish "DevOpsProject.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
