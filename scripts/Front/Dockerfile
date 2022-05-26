@@ -1,7 +1,7 @@
 FROM node:alpine AS build
+EXPOSE 4200
 WORKDIR /usr/src/app
-COPY package.json package-lock.json ./
+COPY ./ /usr/src/app/
 RUN npm install
-COPY . .
 RUN npm run build
 

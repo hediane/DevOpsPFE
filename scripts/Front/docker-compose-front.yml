@@ -13,11 +13,11 @@ services:
 
  nginx_proxy:
   build:
-    context : ./nginx/front
+    context : ./nginx
     dockerfile : Dockerfile
   container_name: nginx_Front
   volumes:
    - ./:/var/www
   ports:
-   - "4000:80"
+   - "4001:80"
   restart : always
