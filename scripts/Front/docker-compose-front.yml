@@ -6,7 +6,7 @@ services:
    dockerfile : Dockerfile
   container_name : Front
   expose:
-   - "5001"
+   - "4200"
   depends_on:
    - nginx_proxy
   restart : always
