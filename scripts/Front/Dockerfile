@@ -6,4 +6,4 @@ RUN npm install -g npm@8.11.0 -g @angular/cli
 RUN npm install
 COPY ./DevOpsFront .
 RUN npm run build
-CMD ["npm", "start"]
+CMD ng serve --port 4200 
