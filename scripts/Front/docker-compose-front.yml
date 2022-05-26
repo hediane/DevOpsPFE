@@ -5,8 +5,10 @@ services:
    context : .
    dockerfile : Dockerfile
   container_name : Front
-  expose:
-   - "4200"
+  ports:
+   - "4200:4200"
+  volumes:
+      - .:/usr/src/app/
   depends_on:
    - nginx_proxy
   restart : always
