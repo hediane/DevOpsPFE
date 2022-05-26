@@ -1,4 +1,4 @@
-FROM node:16.0-alpine AS build
+FROM node:16.10-alpine AS build
 EXPOSE 4200
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
