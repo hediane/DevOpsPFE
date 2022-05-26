@@ -6,5 +6,5 @@ RUN npm install -g npm@8.11.0 -g @angular/cli
 RUN npm install
 COPY ./DevOpsFront .
 #RUN npm run build
-RUN ng build -- --deploy-url=/envapp/ --prod
+RUN ng build 
 CMD ng serve -o
