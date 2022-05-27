@@ -15,7 +15,7 @@ services:
 
  nginx_proxy:
   build:
-    context : .
+    context : ./nginx
     dockerfile : Dockerfile
   container_name: nginx_Front
   volumes:
