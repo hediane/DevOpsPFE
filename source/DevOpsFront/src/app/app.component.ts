@@ -29,7 +29,7 @@ export class AppComponent implements OnInit{
 
   ngOnInit(): void {
 
-    this.http.get<any[]>('http://192.168.56.111:4001/WeatherForecast' , httpOptions).subscribe(
+    this.http.get<any[]>('http://87.106.205.95:4001/WeatherForecast' , httpOptions).subscribe(
       res => {
         this.weatherList = res;
         console.log('helooo',res);
