@@ -10,10 +10,10 @@ services:
   expose:
    - "5000"
   depends_on:
-   - nginx_proxy
+   - nginx
   restart : always
 
- nginx_proxy:
+ nginx:
   build:
     context : ./nginx
     dockerfile : Dockerfile
