@@ -8,5 +8,6 @@ RUN npm install
 COPY ./DevOpsFront .
 #RUN npm run build
 RUN ng build --prod
+COPY --from=build /app/dist/DevOpsFront /usr/share/nginx/html
 
 
