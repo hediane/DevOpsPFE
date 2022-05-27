@@ -14,5 +14,5 @@ CMD ng serve -o
 FROM nginx:latest
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 WORKDIR /usr/local/app
-COPY --from=build /app/dist/DevOpsFront/ /usr/share/nginx/html
+COPY --from=build dist/DevOpsFront/ /usr/share/nginx/html
 EXPOSE 80
