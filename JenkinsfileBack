@@ -1,14 +1,13 @@
 @Library('library_back') _
 library_back(
     scmurl:'https://github.com/hediane/DevOpsPFE.git' ,
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    BackPath : '/source/DevOpsProject',
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps'
     DestinationFile: '/var/jenkins_home/workspace/aoso/DevOps/backend',
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
-    dockerComposeFileLocation: 'scripts/Back/docker-compose-front.yml',
     DockerfileLocation:'scripts/Back/Dockerfile',
     nginxLocation: '/scripts/Back/nginx',
-    BackPath : '/source/DevOpsProject',
+    dockerComposeFileLocation: 'scripts/Back/docker-compose-back.yml',
     devValidator:'AmaniGHADDAB'
-
 )
