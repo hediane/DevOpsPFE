@@ -4,7 +4,7 @@ library_front(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     BackPath : '/source/DevOpsFront',
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
-    DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps'
+    DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps',
     DestinationFileFront: '/var/jenkins_home/workspace/aoso/DevOps/frontend',
     DockerfileLocation:'scripts/Front/Dockerfile',
     nginxLocation: '/scripts/Front/nginx',
