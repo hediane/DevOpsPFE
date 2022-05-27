@@ -6,8 +6,8 @@ library_back(
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps' ,
     DestinationFile :'/var/jenkins_home/workspace/aoso/DevOps/backend',
-    DockerfileLocation:'scripts/Back/Dockerfile',
+    DockerfileLocation:'/scripts/Back/Dockerfile',
     nginxLocation: '/scripts/Back/nginx',
-    dockerComposeFileLocation: 'scripts/Back/docker-compose-back.yml',
+    dockerComposeFileLocation: '/scripts/Back/docker-compose-back.yml',
     devValidator:'AmaniGHADDAB'
 )
