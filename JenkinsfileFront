@@ -6,8 +6,8 @@ library_front(
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps',
     DestinationFileFront: '/var/jenkins_home/workspace/aoso/DevOps/frontend',
-    DockerfileLocation:'scripts/Front/Dockerfile',
+    DockerfileLocation:'/scripts/Front/Dockerfile',
     nginxLocation: '/scripts/Front/nginx',
-    dockerComposeFileLocation: 'scripts/Front/docker-compose-front.yml',
+    dockerComposeFileLocation: '/scripts/Front/docker-compose-front.yml',
     devValidator:'AmaniGHADDAB, hediane'
 )
