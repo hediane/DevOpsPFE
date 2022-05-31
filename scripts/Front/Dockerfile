@@ -8,7 +8,6 @@ RUN npm install
 COPY ./DevOpsFront .
 #RUN npm run build
 RUN ng build --prod
-RUN ng serve -o
 
 
 FROM nginx:latest
