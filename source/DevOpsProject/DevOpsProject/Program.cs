@@ -6,6 +6,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Reflection;
+using Serilog;  
+using Serilog.Sinks.Elasticsearch; 
 
 namespace DevOpsProject
 {

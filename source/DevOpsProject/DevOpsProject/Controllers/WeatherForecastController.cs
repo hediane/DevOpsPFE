@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace DevOpsProject.Controllers
 {
@@ -25,8 +26,12 @@ namespace DevOpsProject.Controllers
         public IActionResult Index()
         {
             _logger.LogInformation("Hello guys i'm hediane at {date}", DateTime.UtcNow);
-
             return View();
+        }
+
+        private IActionResult View()
+        {
+            throw new NotImplementedException();
         }
 
         [HttpGet]
@@ -34,7 +39,7 @@ namespace DevOpsProject.Controllers
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {  _logger.LogInformation("Get weather from hediane ", DateTime.UtcNow);
+            {  
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)]
