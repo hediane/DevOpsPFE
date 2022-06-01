@@ -11,15 +11,22 @@ services:
    - "4200"
   depends_on:
    - nginx_proxy
+  networks:
+      - net
   restart : always
 
  nginx_proxy:
   build:
     context : .
     dockerfile : Dockerfile
-  container_name: nginx_Front
+  container_name: nginx_front
   volumes:
    - ./:/var/www
   ports:
    - "4002:80"
+  networks:
+    - net
   restart : always
+networks:
+  net:
+    driver: bridge
