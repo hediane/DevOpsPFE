@@ -8,7 +8,7 @@ library_back(
     DestinationFile : '/srv/aoso/DevOps/backend',
     DockerfileLocation:'/scripts/Back/Dockerfile',
     nginxLocation: '/scripts/Back/nginx',
-    elasticsearch:'/source/DevOpsProject/docker-compose-elasticsearch.yml',
+    elasticsearch:'/source/DevOpsProject/DevOpsProject/docker-compose-elasticsearch.yml',
     dockerComposeFileLocation: '/scripts/Back/docker-compose-back.yml',
     devValidator:'AmaniGHADDAB'
 )
