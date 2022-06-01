@@ -1,7 +1,7 @@
 @Library('library_back') _
 library_back(
     scmurl:'https://github.com/hediane/DevOpsPFE.git' ,
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    dockerComposeLocation:'/usr/bin/docker-compose',
     BackPath : '/source/DevOpsProject',
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps' ,
