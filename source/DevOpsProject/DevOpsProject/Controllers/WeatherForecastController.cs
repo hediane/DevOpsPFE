@@ -28,11 +28,17 @@ namespace DevOpsProject.Controllers
             _logger.LogInformation("Hello guys i'm hediane at {date}", DateTime.UtcNow);
             return View();
         }
-
-        private IActionResult View()
+        public IActionResult Privacy()
         {
-            throw new NotImplementedException();
+            return View();
         }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+    
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
