@@ -6,9 +6,12 @@ library_back(
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps' ,
     DestinationFile : '/srv/aoso/DevOps/backend',
+    ProjectName : '/DevOpsProject/DevOpsProject',
     DockerfileLocation:'/scripts/Back/Dockerfile',
     nginxLocation: '/scripts/Back/nginx',
     elasticsearch:'/scripts/Back/docker-compose-elasticsearch.yml',
     dockerComposeFileLocation: '/scripts/Back/docker-compose-back.yml',
+    dockerComposeDestination : '/srv/aoso/DevOps/backend/docker-compose-back.yml',
+    dockerComposeElasticDestintination : '/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     devValidator:'AmaniGHADDAB'
 )
