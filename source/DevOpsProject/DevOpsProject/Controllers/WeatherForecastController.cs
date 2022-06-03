@@ -22,12 +22,14 @@ namespace DevOpsProject.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
+            _logger.LogInformation("Hello Teams , we are back , it's our new DevOps Project ");  
+
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
-        {
-            var rng = new Random();
+        {   _logger.LogInformation("Trying get weather ");  
+             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {  
                 Date = DateTime.Now.AddDays(index),
