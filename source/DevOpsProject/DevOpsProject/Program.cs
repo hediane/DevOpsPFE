@@ -12,58 +12,18 @@ using Serilog.Sinks.Elasticsearch;
 
 namespace DevOpsProject
 {
-	public class Program
-{
-    public static void Main(string[] args)
+ public class Program
     {
-        var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-        var configuration = new ConfigurationBuilder()
-            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-            .AddJsonFile($"appsettings.{environment}.json", optional: true)
-            .Build();
-        
-        ConfigureLogging(environment, configuration);
-
-        try
+        public static void Main(string[] args)
         {
-            Log.Information("Starting host.");
             CreateHostBuilder(args).Build().Run();
         }
-        catch (Exception ex)
-        {
-            Log.Fatal(ex, "Host failure.");
-        }
-        finally
-        {
-            Log.CloseAndFlush();
-        }
-    }
 
-    private static void ConfigureLogging(string environment, IConfigurationRoot configuration)
-    {
-        Log.Logger = new LoggerConfiguration()
-            .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Information)
-            .Enrich.FromLogContext()
-            .Enrich.WithEnvironmentName()
-            .Enrich.WithMachineName()
-            .WriteTo.Console()
-            .WriteTo.Debug()
-            .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(configuration["ElasticSearch:Url"]))
-            {
-                AutoRegisterTemplate = true,
-                AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv6,
-                IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name!.ToLower().Replace(".", "-")}-{environment?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
-            })
-            .ReadFrom.Configuration(configuration)
-            .CreateLogger();
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
-
-    private static IHostBuilder CreateHostBuilder(string[] args) =>
-        Host.CreateDefaultBuilder(args)
-            .UseSerilog()
-            .ConfigureWebHostDefaults(webBuilder =>
-            {
-                webBuilder.UseStartup<Startup>();
-            });
-}
 }
