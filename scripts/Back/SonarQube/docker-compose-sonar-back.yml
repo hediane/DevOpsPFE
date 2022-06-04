@@ -38,3 +38,4 @@ volumes:
   sonarqube_extensions:
   postgresql:
   postgresql_data:
+  sonarqube_bundled-plugins:
