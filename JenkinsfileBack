@@ -14,5 +14,6 @@ library_back(
     dockerComposeDestination : '/srv/aoso/DevOps/backend/docker-compose-back.yml',
     dockerComposeElasticDestintination : '/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     dockerComposeSonarQube : '/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
+    dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
     devValidator:'AmaniGHADDAB'
 )
