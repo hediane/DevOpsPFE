@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.3"
 
 services:
 
@@ -62,8 +62,6 @@ services:
 networks:
 
   sonarqube-net:
-    drive: bridge
-
 volumes:
 
   sonar_conf:
