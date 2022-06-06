@@ -1,45 +1,75 @@
-version: "3.7"
+version: "3.3"
 
 services:
-  sonarqube:
-    image: sonarqube:9.2.1-community
-    restart: always
-    environment:
-     environment:
-      - POSTGRESQL_HOST=postgresql
-      - POSTGRESQL_PORT=5444
-      - POSTGRESQL_ROOT_USER=postgres
-      - POSTGRESQL_CLIENT_CREATE_DATABASE_NAME=test_sonarqube
-      - POSTGRESQL_CLIENT_CREATE_DATABASE_USERNAME=bn_sonarqube
-      - POSTGRESQL_CLIENT_CREATE_DATABASE_PASSWORD=123
-      - SONARQUBE_DATABASE_NAME=bitnami_sonarqube
-      - SONARQUBE_DATABASE_USER=bn_sonarqube
-      - SONARQUBE_DATABASE_PASSWORD=123
-    ports:
-      - "9000:9000"
-      - "9092:9092"
-    volumes:
-      - sonarqube_conf:/opt/sonarqube/conf
-      - sonarqube_data:/opt/sonarqube/data
-      - sonarqube_extensions:/opt/sonarqube/extensions
-      - sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
 
   db:
-    image: postgres:14
-    restart: always
-    ports:
-      - '5444:5432'
+
+    image: postgres
+
     environment:
-      - ALLOW_EMPTY_PASSWORD=yes
+
+        - POSTGRES_USER=sonar
+
+        - POSTGRES_PASSWORD=sonar
+
+        - POSTGRES_DB=sonar
+
     volumes:
-      - sonarqube_db:/var/lib/postgresql
-      # This needs explicit mapping due to https://github.com/docker-library/postgres/blob/4e48e3228a30763913ece952c611e5e9b95c8759/Dockerfile.template#L52
-      - postgresql_data:/var/lib/postgresql/data
+
+        - postgres_data:/var/lib/postgresql/data
+
+    networks:
+
+        - sonarqube-net
+
+
+
+    sonarqube:
+
+      image: sonarqube:community
+
+      depends_on:
+
+        - db
+
+      environment:
+
+          - sonar.jdbc.username=sonar
+
+          - sonar.jdbc.url=jdbc:postgresql://db/sonar
+
+          - sonar.jdbc.password=sonar
+
+      ports:
+
+          - 9000:9000
+
+      volumes:
+
+          - sonar_conf:/opt/sonarqube/conf
+
+          - sonar_data:/opt/sonarqube/data
+
+          - sonar_extensions:/opt/sonarqube/extensions
+
+          - sonar_plugins:/opt/sonarqube/lib/bundled-plugins
+
+      networks:
+
+          - sonarqube-net
+
+networks:
+
+  sonarqube-net:
 
 volumes:
-  postgresql_data:
-  sonarqube_bundled-plugins:
-  sonarqube_conf:
-  sonarqube_data:
-  sonarqube_db:
-  sonarqube_extensions:
+
+  sonar_conf:
+
+  sonar_data:
+
+  sonar_extensions:
+
+  sonar_plugins:
+
+  postgres_data:
