@@ -17,7 +17,7 @@ services:
         - sonarqube-net
   sonarqube:
 
-      image: sonarqube::8.9-community
+      image: sonarqube:8.9-community
 
       depends_on:
 
