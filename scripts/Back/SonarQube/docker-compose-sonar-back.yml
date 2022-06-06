@@ -57,12 +57,12 @@ services:
           - sonar_plugins:/opt/sonarqube/lib/bundled-plugins
 
       networks:
-
           - sonarqube-net
 
 networks:
 
   sonarqube-net:
+    drive: bridge
 
 volumes:
 
