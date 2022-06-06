@@ -30,7 +30,8 @@ services:
         - sonar_extensions:/opt/sonarqube/extensions
         - sonar_plugins:/opt/sonarqube/lib/bundled-plugins
       networks:
-      - sonarqube-net
+        - sonarqube-net
+      restart: always
 
 networks:
   sonarqube-net:
