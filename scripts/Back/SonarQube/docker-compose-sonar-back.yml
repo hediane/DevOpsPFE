@@ -10,7 +10,6 @@ services:
         - '5432:5432'
     volumes:
         - postgres_data:/var/lib/postgresql/data
-    restart: always
     networks:
         - sonarqube-net
 
@@ -31,7 +30,7 @@ services:
         - sonar_plugins:/opt/sonarqube/lib/bundled-plugins
       networks:
         - sonarqube-net
-      restart: always
+      
 
 networks:
   sonarqube-net:
