@@ -14,7 +14,7 @@ services:
         - sonarqube-net
 
   sonarqube:
-      image: sonarqube:latest
+      image: sonarqube:8.9
       depends_on:
         - db
       environment:
