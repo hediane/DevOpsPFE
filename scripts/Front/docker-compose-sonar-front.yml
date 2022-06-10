@@ -14,7 +14,7 @@ services:
         - sonarqube-net
 
   sonarqube:
-      image: sonarqube:9.4-community
+      image: sonarqube:9.2.1-community
       depends_on:
         - db
       environment:
@@ -22,7 +22,7 @@ services:
         - sonar.jdbc.password=sonar
         - sonar.jdbc.url=jdbc:postgresql://db:5432/sonar
       ports:
-        - '9002:9000'
+        - '9000:9000'
       volumes:
         - sonar_conf:/opt/sonarqube/conf
         - sonar_data:/opt/sonarqube/data
