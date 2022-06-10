@@ -8,8 +8,8 @@ library_front(
     DestinationFileFront: '/srv/aoso/DevOps/frontend',
     DockerfileLocation:'/scripts/Front/Dockerfile',
     nginxLocation: '/scripts/Front/nginx',
-    dockerComposeFileLocation: '/scripts/Front/SonarQube/docker-compose-front.yml',
-    dockerComposeSonarQube : '/scripts/Front/docker-compose-sonar-front.yml',
+    dockerComposeFileLocation: '/scripts/Front/docker-compose-front.yml',
+    dockerComposeSonarQube : '/scripts/Front/SonarQube/docker-compose-sonar-front.yml',
     dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/frontend/docker-compose-sonar-back.yml',
 
     devValidator:'AmaniGHADDAB, hediane'
