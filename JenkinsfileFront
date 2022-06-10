@@ -9,7 +9,7 @@ library_front(
     DockerfileLocation:'/scripts/Front/Dockerfile',
     nginxLocation: '/scripts/Front/nginx',
     dockerComposeFileLocation: '/scripts/Front/docker-compose-front.yml',
-    dockerComposeSonarQube : '/scripts/Front/SonarQube/docker-compose-sonar-front.yml',
+    dockerComposeSonarQube : '/scripts/Front/docker-compose-sonar-front.yml',
     dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/frontend/docker-compose-sonar-back.yml',
 
     devValidator:'AmaniGHADDAB, hediane'
