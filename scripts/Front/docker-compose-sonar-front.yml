@@ -59,16 +59,16 @@ services:
 
 networks:
 
-sonarqube-net:
+  sonarqube-net:
 
 volumes:
 
-sonar_conf:
+  sonar_conf:
 
-sonar_data:
+  sonar_data:
 
-sonar_extensions:
+  sonar_extensions:
 
-sonar_plugins:
+  sonar_plugins:
 
-postgres_data:
+  postgres_data:
