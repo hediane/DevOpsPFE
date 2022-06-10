@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   db:
-    image: postgres:14.1-alpine
+    image: postgres
     environment:
         - POSTGRES_USER=sonar
         - POSTGRES_PASSWORD=sonar
@@ -22,7 +22,7 @@ services:
         - sonar.jdbc.password=sonar
         - sonar.jdbc.url=jdbc:postgresql://db:5432/sonar
       ports:
-        - '9000:9000'
+        - '9002:9000'
       volumes:
         - sonar_conf:/opt/sonarqube/conf
         - sonar_data:/opt/sonarqube/data
