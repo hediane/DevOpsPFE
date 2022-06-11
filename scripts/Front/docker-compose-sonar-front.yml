@@ -15,7 +15,7 @@ services:
       - sonarqube_log:/opt/sonarqube/log
 
   db:
-    image: postgres:lts
+    image: postgres
     networks:
       - sonarnet
     ports:
