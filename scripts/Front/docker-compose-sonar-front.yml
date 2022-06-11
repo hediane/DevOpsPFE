@@ -15,7 +15,7 @@ services:
       - sonarqube_log:/opt/sonarqube/log
 
   db:
-    image: postgres
+    image: postgres:14.1-alpine
     networks:
       - sonarnet
     ports:
