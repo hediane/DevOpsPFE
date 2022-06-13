@@ -1,9 +1,6 @@
 @Library('library') _
 
-DevValidator
-(
-    devValidator:'AmaniGHADDAB'
-)
+
 SCM
 (
     scmurl:'https://github.com/hediane/DevOpsPFE.git'
