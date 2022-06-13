@@ -21,13 +21,11 @@ Elasticsearchs(
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
 
 )
-SonarQubeDotnet
-(
+SonarQubeDotnet(
     dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 )
 
-DockerBuild
-(
+DockerBuild(
     dockerComposeLocation:'/usr/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
