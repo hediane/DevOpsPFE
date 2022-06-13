@@ -1,19 +1,33 @@
 @Library('library_back') _
-library_back(
-    scmurl:'https://github.com/hediane/DevOpsPFE.git' ,
-    dockerComposeLocation:'/usr/bin/docker-compose',
+
+devValidator(
+    devValidator:'AmaniGHADDAB , hediane , hbr ' 
+)
+SCM
+(
+    scmurl:'https://github.com/hediane/DevOpsPFE.git'
+)
+CopyFolder
+(
     BackPath : 'source/DevOpsProject',
+    ProjectName : 'source/DevOpsProject',
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps' ,
     DestinationFile : '/srv/aoso/DevOps/backend',
-    ProjectName : 'source/DevOpsProject/DevOpsProject',
     DockerfileLocation:'/scripts/Back/Dockerfile',
     nginxLocation: '/scripts/Back/nginx',
     elasticsearch:'/scripts/Back/docker-compose-elasticsearch.yml',
-    dockerComposeFileLocation: '/scripts/Back/docker-compose-back.yml',
     dockerComposeDestination : '/srv/aoso/DevOps/backend/docker-compose-back.yml',
     dockerComposeElasticDestintination : '/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     dockerComposeSonarQube : '/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
     dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
-    devValidator:'AmaniGHADDAB'
+)
+
+DockerBuild
+(
+    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeDestination : '/srv/aoso/DevOps/backend/docker-compose-back.yml',
+    dockerComposeElasticDestintination : '/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
+    dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
+
 )
