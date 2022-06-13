@@ -8,7 +8,6 @@ SonarQubeDotnet(
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
 )
 CopyFolder(
-    BackPath :'source/DevOpsProject',
     ProjectName :'source/DevOpsProject',
     DestinationFolder1 :'/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2 :'/var/jenkins_home/workspace/aoso/DevOps' ,
