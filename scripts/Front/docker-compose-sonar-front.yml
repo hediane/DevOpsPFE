@@ -4,23 +4,23 @@ services:
 
   db:
 
-  image: postgres
+    image: postgres
 
-  environment:
+    environment:
 
-    - POSTGRES_USER=sonar
+      - POSTGRES_USER=sonar
 
-    - POSTGRES_PASSWORD=sonar
+      - POSTGRES_PASSWORD=sonar
 
-    - POSTGRES_DB=sonar
+      - POSTGRES_DB=sonar
 
-  volumes:
+    volumes:
 
-    - postgres_data:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
 
-  networks:
+    networks:
 
-   - sonarqube-net
+    - sonarqube-net
 
 
 
