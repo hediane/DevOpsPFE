@@ -26,7 +26,7 @@ services:
 
   sonarqube:
 
-    image: sonarqube:9.2.4-developer
+    image: sonarqube:9.4-developer
 
     depends_on:
 
