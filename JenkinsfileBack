@@ -1,6 +1,6 @@
 @Library('library_back') _
 
-devValidator(
+DevValidator(
     devValidator:'AmaniGHADDAB , hediane , hbr ' 
 )
 SCM
