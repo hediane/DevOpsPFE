@@ -1,13 +1,11 @@
 @Library('library') _
 
-
-SCM
-(
-    scmurl:'https://github.com/hediane/DevOpsPFE.git'
+SCM(
+    scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
 CopyFolder
 (
-    BackPath : 'source/DevOpsProject',
+    BackPath :'source/DevOpsProject',
     ProjectName : 'source/DevOpsProject',
     DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps' ,
