@@ -4,7 +4,7 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
 SonarQubeDotnet(
-    dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
+    dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
 )
 CopyFolder(
     BackPath :'source/DevOpsProject',
@@ -20,6 +20,7 @@ CopyFolder(
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 )
+
 Elasticsearchs(
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
 
