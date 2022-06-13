@@ -62,7 +62,7 @@ networks:
 
       sonarqube-net:
 
-      volumes:
+volumes:
 
       sonar_conf:
 
@@ -73,3 +73,4 @@ networks:
       sonar_plugins:
 
       postgres_data:
+      
