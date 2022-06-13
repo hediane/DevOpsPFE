@@ -3,8 +3,7 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
-CopyFolder
-(
+CopyFolder(
     BackPath :'source/DevOpsProject',
     ProjectName :'source/DevOpsProject',
     DestinationFolder1 :'/var/jenkins_home/workspace/aoso/' ,
@@ -18,8 +17,7 @@ CopyFolder
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 )
-Elasticsearch
-(
+Elasticsearchs(
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
 
 )
