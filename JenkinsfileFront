@@ -33,32 +33,3 @@ DockerBuild(
 
 
 
-
-////
-CopyFolder(
-    ProjectName :'source/DevOpsProject',
-    DestinationFolder1 :'/var/jenkins_home/workspace/aoso/' ,
-    DestinationFolder2 :'/var/jenkins_home/workspace/aoso/DevOps' ,
-    DestinationFile :'/srv/aoso/DevOps/backend',
-    DockerfileLocation :'/scripts/Back/Dockerfile',
-    nginxLocation :'/scripts/Back/nginx',
-    elasticsearch :'/scripts/Back/docker-compose-elasticsearch.yml',
-    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
-)
-
-Elasticsearchs(
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-
-)
-
-
-DockerBuild(
-    dockerComposeLocation:'/usr/bin/docker-compose',
-    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
-
-)
