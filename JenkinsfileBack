@@ -22,7 +22,7 @@ CopyFolder(
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 )
 
-Elasticsearchs(
+Elasticsearch(
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
 
 )
