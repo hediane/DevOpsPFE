@@ -1,7 +1,7 @@
 version: "3.7"
 services:
   db:
-    image: postgres:alpine
+    image: postgres
     environment:
         - POSTGRES_USER=sonar
         - POSTGRES_PASSWORD=sonar
@@ -14,7 +14,7 @@ services:
         - sonarqube-net
 
   sonarqube:
-      image: sonarqube
+      image: sonarqube:community
       depends_on:
         - db
       environment:
