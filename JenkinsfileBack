@@ -23,6 +23,7 @@ CopyFolder(
 )
 
 Elasticsearch(
+    dockerComposeLocation:'/usr/bin/docker-compose',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
 
 )
