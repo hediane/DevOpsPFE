@@ -8,17 +8,20 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
 
-
 CopyFolder(
-    ProjectName :'/source/DevOpsFront',
-    DestinationFolder1 :'/var/jenkins_home/workspace/aoso/' ,
-    DestinationFolder2 :'/var/jenkins_home/workspace/aoso/DevOps' ,
+    ProjectName :'source/DevOpsFront',
+    DestinationFolder :'/var/jenkins_home/workspace/AosoBack/source/DevOpsFront' ,
+    DestinationFolder1 :'/var/jenkins_home/workspace/AosoBack/' ,
+    DestinationFolder2 :'/var/jenkins_home/workspace/AosoBack/' ,
     DestinationFile :'/srv/aoso/DevOps/frontend',
+    DestinationProject:'/srv/aoso/DevOps/backend/DevOpsFront',
     DockerfileLocation :'/scripts/Front/Dockerfile',
     nginxLocation :'/scripts/Front/nginx',
+    DestinationNginx:'/srv/aoso/DevOps/frontend/nginx',
+    dockerComposeFileLocation:'/scripts/Front/docker-compose-front.yml',
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
-    dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose-sonar.yml',
+    dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
+    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 )
 
 DockerBuild(
