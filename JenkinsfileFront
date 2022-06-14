@@ -8,10 +8,6 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
 
-SonarQubeAngular(
-    ProjectName :'source/DevOpsFront',
-    dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
-)
 
 CopyFolder(
     ProjectName :'source/DevOpsFront',
