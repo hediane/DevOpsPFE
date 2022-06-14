@@ -12,7 +12,7 @@ services:
         - sonarqube-net
 
   sonarqube:
-      image: sonarqube:community
+      image: sonarqube:8.9
       depends_on:
         - db
       environment:
