@@ -5,7 +5,7 @@ SCM(
 )
 
 CopyFolder(
-    ProjectName :'/source/DevOpsProject',
+    ProjectName :'DevOpsProject',
     DestinationFolder1 :'/var/jenkins_home/workspace/aoso/' ,
     DestinationFolder2 :'/var/jenkins_home/workspace/aoso/DevOps' ,
     DestinationFile :'/srv/aoso/DevOps/backend',
