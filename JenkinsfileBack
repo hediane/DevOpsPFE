@@ -15,6 +15,7 @@ CopyFolder(
     nginxLocation :'/scripts/Back/nginx',
     DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
     elasticsearch :'/scripts/Back/docker-compose-elasticsearch.yml',
+    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
     dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
