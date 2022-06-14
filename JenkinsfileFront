@@ -1,15 +1,32 @@
-@Library('library_front') _
-library_front(
-    scmurl:'https://github.com/hediane/DevOpsPFE.git' ,
-    dockerComposeLocation:'/usr/bin/docker-compose',
-    FrontPath : 'source/DevOpsFront',
-    DestinationFolder1 : '/var/jenkins_home/workspace/aoso/' ,
-    DestinationFolder2: '/var/jenkins_home/workspace/aoso/DevOps',
-    DestinationFileFront: '/srv/aoso/DevOps/frontend',
-    DockerfileLocation:'/scripts/Front/Dockerfile',
-    nginxLocation: '/scripts/Front/nginx',
-    dockerComposeFileLocation: '/scripts/Front/docker-compose-front.yml',
-    dockerComposeSonarQube : '/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
-    dockerComposeSonarQubeDestintion : '/srv/aoso/DevOps/frontend/docker-compose-sonar-front.yml',
+@Library('library') _
+
+DevValidator(
     devValidator:'AmaniGHADDAB, hediane'
+)
+
+SCM(
+    scmurl :'https://github.com/hediane/DevOpsPFE.git'
+)
+
+SonarQubeAngular(
+    ProjectName :'source/DevOpsFront',
+    dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
+)
+
+CopyFolder(
+    ProjectName :'source/DevOpsFront',
+    DestinationFolder1 :'/var/jenkins_home/workspace/aoso/' ,
+    DestinationFolder2 :'/var/jenkins_home/workspace/aoso/DevOps' ,
+    DestinationFile :'/srv/aoso/DevOps/frontend',
+    DockerfileLocation :'/scripts/Front/Dockerfile',
+    nginxLocation :'/scripts/Front/nginx',
+    dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
+    dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
+    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose-sonar.yml',
+)
+
+DockerBuild(
+    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
+    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose-sonar.yml',
 )
