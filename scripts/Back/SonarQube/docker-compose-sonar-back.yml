@@ -4,7 +4,7 @@ services:
     build:
       context : .
       dockerfile : Dockerfile
-      container_name : sonarQube
+    container_name : sonarQube
     depends_on:
       - db
     environment:
