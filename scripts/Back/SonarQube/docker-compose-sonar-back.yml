@@ -1,7 +1,7 @@
 version: "3"
 services:
   sonarqube:
-    image: sonarqube:9.2.4-community
+    image: sonarqube:lts-community
     depends_on:
       - db
     environment:
@@ -15,7 +15,7 @@ services:
     ports:
       - "9000:9000"
   db:
-    image: postgres:14.1-alpine 
+    image: postgres
     environment:
       POSTGRES_USER: sonar
       POSTGRES_PASSWORD: sonar
