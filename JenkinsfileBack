@@ -30,7 +30,7 @@ CopyFolder(
 
 
 DockerBuild(
-    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
