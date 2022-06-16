@@ -9,7 +9,8 @@ SonarQubeDotnet(
     ProjectName :'source/DevOpsProject',
     dockerComposeSonarQube :'scripts/Back/SonarQube/docker-compose-sonar-back.yml',
 )
-
+QualityGates(
+)
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/jenkins_home/workspace/Back/source/DevOpsProject' ,
