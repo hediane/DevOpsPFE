@@ -3,14 +3,9 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
-DockerBuild(
-    dockerComposeLocation:'/usr/bin/docker-compose',
-    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
-)
+
 SonarQubeDotnet(
-    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
     dockerComposeSonarQube :'scripts/Back/SonarQube/docker-compose-sonar-back.yml',
 )
@@ -33,10 +28,12 @@ CopyFolder(
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 )
 
-Elasticsearch(
-    dockerComposeLocation:'/usr/bin/docker-compose',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
 
+DockerBuild(
+    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
+    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
+    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 )
 
 

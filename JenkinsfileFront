@@ -29,6 +29,10 @@ DockerBuild(
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose-sonar.yml',
 )
+Elasticsearch(
+    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
 
+)
 
 
