@@ -19,15 +19,13 @@ namespace DevOpsProject.Controllers
         private readonly ILogger<WeatherForecastController> _logger;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
-        {   
-            _logger.LogInformation("Hello Teamss it's hediane at {date}", DateTime.UtcNow);
+        {
             _logger = logger;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
-        {    
-            _logger.LogInformation("Hello Teams DevOps it's our new project follow us at {date}", DateTime.UtcNow);
+        {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
