@@ -19,7 +19,7 @@ namespace DevOpsProject
         }
 
        
-        private static void ConfigureLogging()
+        /*private static void ConfigureLogging()
             {
                 var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
                 var configuration = new ConfigurationBuilder()
@@ -40,7 +40,7 @@ namespace DevOpsProject
                     .CreateLogger();
             }
 
-        private static ElasticsearchSinkOptions ConfigureElasticSink(IConfigurationRoot configuration, string environment)
+        /*private static ElasticsearchSinkOptions ConfigureElasticSink(IConfigurationRoot configuration, string environment)
             {
                 return new ElasticsearchSinkOptions(new Uri(configuration["ElasticConfiguration:Uri"]))
                 {
@@ -59,20 +59,20 @@ namespace DevOpsProject
                     Log.Fatal($"Failed to start {Assembly.GetExecutingAssembly().GetName().Name}", ex);
                     throw;
                 }
-            }
+            }*/
         public static IHostBuilder CreateHostBuilder(string[] args) =>
                 Host.CreateDefaultBuilder(args)
                     .ConfigureWebHostDefaults(webBuilder =>
                     {
                         webBuilder.UseStartup<Startup>();
-                    })
-                    .ConfigureAppConfiguration(configuration =>
+                    });
+                    /*.ConfigureAppConfiguration(configuration =>
                     {
                         configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
                         configuration.AddJsonFile(
                             $"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json",
                             optional: true);
                     })
-                    .UseSerilog();
+                    .UseSerilog();*/
     }
 }
