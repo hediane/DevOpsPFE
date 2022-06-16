@@ -3,6 +3,12 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
+DockerBuild(
+    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
+    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
+    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
+)
 SonarQubeDotnet(
     dockerComposeLocation:'/usr/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
@@ -34,11 +40,5 @@ Elasticsearch(
 )
 
 
-DockerBuild(
-    dockerComposeLocation:'/usr/bin/docker-compose',
-    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar-back.yml',
 
-)
 
