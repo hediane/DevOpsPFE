@@ -14,9 +14,9 @@ SonarQubeAngular(
 
 CopyFolderFront(
     ProjectName :'source/DevOpsFront',
-    DestinationFolder :'/var/jenkins_home/workspace/Front/source/DevOpsFront' ,
-    DestinationFolder1 :'/var/jenkins_home/workspace/Front/' ,
-    DestinationFolder2 :'/var/jenkins_home/workspace/Front/' ,
+    DestinationFolder :'/var/jenkins_home/workspace/Front_main/source/DevOpsFront' ,
+    DestinationFolder1 :'/var/jenkins_home/workspace/Front_main/' ,
+    DestinationFolder2 :'/var/jenkins_home/workspace/Front_main/' ,
     DestinationFile :'/srv/aoso/DevOps/frontend',
     DestinationProject:'/srv/aoso/DevOps/frontend/DevOpsFront',
     DockerfileLocation :'/scripts/Front/Dockerfile',
