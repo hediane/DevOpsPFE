@@ -24,14 +24,14 @@ CopyFolderFront(
     DestinationNginx:'/srv/aoso/DevOps/frontend/nginx',
     dockerComposeFileLocation:'/scripts/Front/docker-compose-front.yml',
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
-    dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar-back.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/frontend/docker-compose-sonar-back.yml',
+    dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
+    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/frontend/docker-compose-sonar.yml',
 )
 
 DockerBuild(
     dockerComposeLocation:'/usr/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose-sonar.yml',
+    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose.yml',
 )
 
 
