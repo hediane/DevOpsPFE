@@ -3,8 +3,11 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
-
-
+SonarQubeDotnet(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    dockerComposeSonarQube :'scripts/Back/SonarQube/docker-compose-sonar.yml',
+)
 
 CopyFolder(
     ProjectName :'source/DevOpsProject',
