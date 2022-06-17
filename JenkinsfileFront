@@ -34,5 +34,10 @@ DockerBuild(
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose.yml',
 )
 
+SonarQubeDotnet(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    dockerComposeSonarQube :'scripts/Back/SonarQube/docker-compose-sonar.yml',
+)
 
 
