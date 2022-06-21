@@ -26,7 +26,11 @@ CopyFolder(
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar.yml',
 )
-
+Nexus(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    dockerComposeNexus :'scripts/Back/Nexus/docker-compose-nexus.yml',
+)
 
 DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
