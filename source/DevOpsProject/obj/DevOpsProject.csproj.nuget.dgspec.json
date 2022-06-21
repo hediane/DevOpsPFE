@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/home/amani/projects/dev/AosoBack/DevOpsProject.csproj": {}
+    "C:\\Users\\ASUS\\Desktop\\Aoso\\source\\DevOpsProject\\DevOpsProject.csproj": {}
   },
   "projects": {
-    "/home/amani/projects/dev/AosoBack/DevOpsProject.csproj": {
+    "C:\\Users\\ASUS\\Desktop\\Aoso\\source\\DevOpsProject\\DevOpsProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/amani/projects/dev/AosoBack/DevOpsProject.csproj",
-        "projectName": "DevOpsProject",
-        "projectPath": "/home/amani/projects/dev/AosoBack/DevOpsProject.csproj",
-        "packagesPath": "/home/amani/.nuget/packages/",
-        "outputPath": "/home/amani/projects/dev/AosoBack/obj/",
+        "projectUniqueName": "C:\\Users\\ASUS\\Desktop\\Aoso\\source\\DevOpsProject\\DevOpsProject.csproj",
+        "projectName": "aosora",
+        "projectPath": "C:\\Users\\ASUS\\Desktop\\Aoso\\source\\DevOpsProject\\DevOpsProject.csproj",
+        "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ASUS\\Desktop\\Aoso\\source\\DevOpsProject\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/amani/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -61,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.408/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
         }
       }
     }
