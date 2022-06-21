@@ -4,7 +4,6 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
 
-
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/jenkins_home/workspace/Back_main/source/DevOpsProject' ,
@@ -27,14 +26,12 @@ CopyFolder(
 Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml'
-   
+    dockerComposeNexus:'/scripts/Back/docker-compose-nexus.yml'
 )
-
 DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar.yml',
+    devValidator : 'amani'
 )
 
 
