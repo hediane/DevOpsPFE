@@ -21,7 +21,7 @@ CopyFolder(
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar.yml',
-    dockerComposeNexus:'/scripts/Back/nexus/docker-compose-nexus.yml',
+    dockerComposeNexus:'/var/jenkins_home/workspace/Back_main/scripts/Back/nexus/docker-compose-nexus.yml',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/nexus'
 )
 Nexus(
