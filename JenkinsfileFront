@@ -11,7 +11,11 @@ SonarQubeAngular(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsFront'
     )
-
+SonarQubeDotnet(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    dockerComposeSonarQube :'scripts/Back/SonarQube/docker-compose-sonar.yml',
+)
 CopyFolderFront(
     ProjectName :'source/DevOpsFront',
     DestinationFolder :'/var/jenkins_home/workspace/Front_main/source/DevOpsFront' ,
