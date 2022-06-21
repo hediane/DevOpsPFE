@@ -22,12 +22,12 @@ CopyFolder(
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar.yml',
     dockerComposeNexus:'/scripts/Back/Nexus/docker-compose-nexus.yml',
-    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/Nexus'
+    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/nexus'
 )
 Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
-    dockerComposeNexusDestination :'/srv/aoso/DevOps/backend/Nexus/docker-compose-nexus.yml'
+    dockerComposeNexusDestination :'/srv/aoso/DevOps/backend/nexus/docker-compose-nexus.yml'
 )
 
 DockerBuild(
