@@ -25,7 +25,7 @@ CopyFolder(
 Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
-    dockerComposeNexus :'scripts/Back/Nexus/docker-compose-nexus.yml',
+    dockerComposeNexus :'/scripts/Back/Nexus/docker-compose-nexus.yml'
 )
 
 DockerBuild(
