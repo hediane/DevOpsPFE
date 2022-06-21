@@ -31,7 +31,7 @@ Nexus(
 DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    devValidator : 'amani,hediane'
+    devValidator : 'amani'
 )
 
 
