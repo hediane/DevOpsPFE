@@ -22,7 +22,7 @@ CopyFolder(
     dockerComposeSonarQube :'/scripts/Back/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar.yml',
     dockerComposeNexus:'/scripts/Back/docker-compose-nexus.yml',
-    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend'
+    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml'
 )
 
 
