@@ -21,10 +21,11 @@ CopyFolderFront(
     dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/frontend/docker-compose-sonar.yml',
 )
-Nexus(
+NexusFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
-    dockerComposeNexus:'/scripts/Back/docker-compose-nexus.yml'
+    dockerComposeNexus:'/scripts/Back/docker-compose-nexus.yml',
+    dist: 'dist/DevOpsFront'
 )
 DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
