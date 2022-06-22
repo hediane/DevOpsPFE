@@ -23,8 +23,6 @@ CopyFolderFront(
 )
 NexusFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
-    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
-    dockerComposeNexus:'/scripts/Back/docker-compose-nexus.yml',
     dist: 'dist/DevOpsFront'
 )
 DockerBuild(
