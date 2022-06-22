@@ -23,7 +23,7 @@ CopyFolderFront(
 )
 NexusFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
-    dist: '/var/jenkins_home/workspace/Front_main/source/DevOpsFront/dist/DevOpsFront'
+    dist: 'dist/DevOpsFront'
 )
 DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
