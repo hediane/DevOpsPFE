@@ -21,6 +21,10 @@ CopyFolderFront(
     dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/frontend/docker-compose-sonar.yml',
 )
+SonarQubeAngular(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsFront'
+    )
 NexusFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dist: 'dist/DevOpsFront'
