@@ -8,7 +8,7 @@ OutilImage(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
     dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
-    elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
+    elasticsearch :'/scripts/Back/elasticsearcch/docker-compose-elasticsearch.yml',
 )
 
 
