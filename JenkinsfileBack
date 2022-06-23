@@ -4,6 +4,13 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 
 )
+OutilImage(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
+    dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
+    elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
+)
+
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/jenkins_home/workspace/Back_main/source/DevOpsProject' ,
@@ -22,6 +29,8 @@ CopyFolder(
     dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml'
 )
+
+
 SonarQubeDotnet(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
@@ -40,7 +49,6 @@ DockerBuild(
     devValidator : 'amani'
     
 )
-
 
 SonarQubeAngular(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
