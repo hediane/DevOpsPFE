@@ -2,7 +2,7 @@
   "name": "dev-ops-front",
   "version": "1.0.0",
   "publishConfig": {
-    "registry": "http://192.168.56.115:8081/repository/npm-hosted/"
+    "registry": "http://192.168.56.115:8081/repository/AosoFront/"
   },
   "scripts": {
     "ng": "ng",
