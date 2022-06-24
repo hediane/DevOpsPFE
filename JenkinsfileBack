@@ -3,7 +3,7 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
-OutilImages(
+OutilImage(
      dockerComposeNexus:'scripts/nexus/docker-compose-nexus.yml',
 )
 SonarQubeDotnet(
