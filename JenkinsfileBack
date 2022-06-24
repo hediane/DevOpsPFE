@@ -15,13 +15,13 @@ CopyFolder(
     DockerfileLocation :'/scripts/Back/Dockerfile',
     nginxLocation :'/scripts/Back/nginx',
     DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
-    elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
+    elasticsearch :'scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
     dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    dockerComposeSonarQube :'/scripts/sonarQube/docker-compose-sonar.yml',
+    dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/backend/docker-compose-sonar.yml',
-    dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
+    dockerComposeNexus:'scripts/nexus/docker-compose-nexus.yml',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml'
 )
 
