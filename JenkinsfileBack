@@ -24,7 +24,6 @@ CopyFolder(
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml'
 )
 
-
 SonarQubeDotnet(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
