@@ -4,9 +4,7 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 
 )
-OutilImage(
-     dockerLocation:'/usr/bin/docker',
-)
+
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/jenkins_home/workspace/Back_main/source/DevOpsProject' ,
@@ -37,6 +35,9 @@ Nexus(
     dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
     DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
     ProjectName :'source/DevOpsProject'
+)
+OutilImage(
+     dockerLocation:'/usr/bin/docker',
 )
 DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
