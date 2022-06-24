@@ -2,9 +2,12 @@
 
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
-
 )
-
+SonarQubeDotnet(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    dockerComposeSonarQube :'scripts/Back/sonarQube/docker-compose-sonar.yml',
+)
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/jenkins_home/workspace/Back_main/source/DevOpsProject' ,
@@ -21,8 +24,6 @@ CopyFolder(
     dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
     dockerComposeNexus:'scripts/nexus/docker-compose-nexus.yml',
 )
-
-
 Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
