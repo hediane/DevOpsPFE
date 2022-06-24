@@ -4,7 +4,9 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 
 )
-
+OutilImage(
+     dockerLocation:'/usr/bin/docker',
+)
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/jenkins_home/workspace/Back_main/source/DevOpsProject' ,
