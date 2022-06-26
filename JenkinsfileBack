@@ -2,7 +2,6 @@
 
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
-
 )
 
 CopyFolder(
