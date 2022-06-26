@@ -31,6 +31,7 @@ Nexus(
     dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
     DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
     ProjectName :'source/DevOpsProject'
+    ProjectPack: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/bin/Debug/net5.0/'
 )
 DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
