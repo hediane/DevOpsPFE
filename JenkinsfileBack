@@ -4,7 +4,9 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 
 )
+TestUnitaire(
 
+)
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/lib/jenkins/workspace/Back_main/source/DevOpsProject' ,
