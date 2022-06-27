@@ -39,3 +39,24 @@ DockerBuild(
 
 
 
+CopyFolder(
+    ProjectName :'source/DevOpsProject',
+    DestinationFolder :'/var/lib/jenkins/workspace/Back_main/source/DevOpsProject' ,
+    DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
+    DestinationFile :'/srv/aoso/DevOps/backend',
+    DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
+    DockerfileLocation :'/scripts/Back/Dockerfile',
+    nginxLocation :'/scripts/Back/nginx',
+    DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
+    elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
+    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
+    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
+)
+
+
+SonarQubeDotnet(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    ProjectPack1: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/'
+    dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
+)
