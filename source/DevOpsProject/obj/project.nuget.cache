@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/ZuKKVcMo3zQwvsJTSwOtYvk5J8Lx9e8Ro2C9fiR3rE08hLkq2zx46nekVvirBA4bVjiYPlYz8uOYAnqklTPrg==",
+  "dgSpecHash": "g+tHb5yHLXwkbgKz3atuikulOX3cad2mmOdmlqBX8hwoh8/tcaeL/dL6qG91hceKYGQL8QHsPEwnpo3FZqY2Jg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\Aoso\\source\\DevOpsProject\\DevOpsProject.csproj",
+  "projectFilePath": "C:\\Users\\ASUS\\Desktop\\ameni\\ProjectDevops\\Source\\AosoBack\\DevOpsProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

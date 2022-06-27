@@ -31,7 +31,7 @@
   },
   "targets": {
     ".NETCoreApp,Version=v5.0": {
-      "DevOpsProject/1.0": {
+      "DevOpsProject/1.0.0": {
         "dependencies": {
           "Swashbuckle.AspNetCore": "5.6.3",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -2085,7 +2085,7 @@
     }
   },
   "libraries": {
-    "DevOpsProject/1.0": {
+    "DevOpsProject/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
