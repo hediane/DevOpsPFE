@@ -10,7 +10,7 @@ SonarQubeDotnet(
     dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
 )
 DockerBuild(
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    dockerComposeLocation:'/usr/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
     devValidator : 'amani , hediane'
     
