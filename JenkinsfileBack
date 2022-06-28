@@ -3,8 +3,12 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
-
-
+SonarQubeDotnet(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    ProjectPack1: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/'
+    dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
+)
 Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',

@@ -35,10 +35,6 @@ DockerBuild(
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose.yml',
 )
-
-
-
-
 CopyFolder(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'/var/lib/jenkins/workspace/Back_main/source/DevOpsProject' ,
@@ -54,9 +50,3 @@ CopyFolder(
 )
 
 
-SonarQubeDotnet(
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
-    ProjectName :'source/DevOpsProject',
-    ProjectPack1: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/'
-    dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
-)
