@@ -9,6 +9,12 @@ SonarQubeDotnet(
     ProjectPack1: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/'
     dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
 )
+DockerBuild(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
+    devValidator : 'amani , hediane'
+    
+)
 Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
@@ -17,10 +23,5 @@ Nexus(
     ProjectName :'source/DevOpsProject',
     ProjectPack: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/'
 )
-DockerBuild(
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
-    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    devValidator : 'amani'
-    
-)
+
 
