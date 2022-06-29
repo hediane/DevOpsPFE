@@ -1,7 +1,9 @@
 @Library('library') _
 
 SCM(
-    scmurl :'https://github.com/hediane/DevOpsPFE.git'
+    scmurl :'https://github.com/hediane/DevOpsPFE.git',
+    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject'
+
 )
 SonarQubeDotnet(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
