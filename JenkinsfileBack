@@ -2,7 +2,6 @@
 
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git',
-    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject'
 
 )
 SonarQubeDotnet(
@@ -19,6 +18,8 @@ Nexus(
     DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
     ProjectName :'source/DevOpsProject',
     ProjectPack: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/'
+    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject'
+
 )
 
 DockerBuild(
