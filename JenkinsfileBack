@@ -5,4 +5,27 @@ SCM(
     Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject'
 
 )
+SonarQubeDotnet(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsProject',
+    ProjectPack1: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/',
+    dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
+)
+Nexus(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    dockerLocation:'/usr/local/bin/docker',
+    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
+    dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
+    DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
+    ProjectName :'source/DevOpsProject',
+    ProjectPack: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/'
+)
+
+DockerBuild(
+    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
+    devValidator : 'amani , hediane'
+    
+)
+
 
