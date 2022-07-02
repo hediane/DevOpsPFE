@@ -27,7 +27,7 @@ SonarQubeAngular(
     )
 NexusFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
-    Dockerfile: '/srv/aoso/DevOps/frontend/',
+    Dockerfile: '/srv/aoso/DevOps/frontend/DevOpsFront',
     dist: 'dist/DevOpsFront'
 )
 
