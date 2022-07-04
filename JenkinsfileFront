@@ -35,6 +35,7 @@ DockerBuild(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose.yml',
+    devValidator : 'amani , hediane , aosora'
 )
 
 
