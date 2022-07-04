@@ -7,7 +7,7 @@ SCM(
 SonarQubeDotnet(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
-    ProjectPack1: '/var/lib/jenkins/workspace/Back_main/source/DevOpsProject/',
+    ProjectPack1: '/var/jenkins_home/workspace/Back_main/source/DevOpsProject/',
     dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
 )
 CopyFolder(
