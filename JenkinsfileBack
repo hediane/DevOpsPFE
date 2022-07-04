@@ -21,7 +21,7 @@ CopyFolder(
     DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
     elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
+    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml'
 )
 Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
@@ -31,7 +31,9 @@ Nexus(
     DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
     ProjectName :'source/DevOpsProject',
     ProjectPack: 'source/DevOpsProject/',
-    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject'
+    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
+    DestinationNginx:'/srv/aoso/DevOps/backend/nginx'
+
 
 )
 
