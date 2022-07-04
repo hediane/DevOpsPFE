@@ -8,7 +8,7 @@ SCM(
 
 CopyFolderFront(
     ProjectName :'source/DevOpsFront',
-    DestinationFolder :'/var/lib/jenkins/workspace/Front_main/source/DevOpsFront' ,
+    DestinationFolder :'source/DevOpsFront' ,
     DestinationFolder1 :'/var/lib/jenkins/workspace/Front_main/' ,
     DestinationFolder2 :'/var/lib/jenkins/workspace/Front_main/' ,
     DestinationFile :'/srv/aoso/DevOps/frontend',
