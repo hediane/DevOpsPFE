@@ -28,7 +28,7 @@ NexusFront(
     dist: 'dist/DevOpsFront'
 )
 
-Deploy-front-ssh(
+DeployFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose.yml',
