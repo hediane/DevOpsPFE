@@ -1,9 +1,10 @@
 version: '3.7'
 services:
  partie_frontend:
-  build:
-   context : .
-   dockerfile : Dockerfile
+  #build:
+   #context : .
+   #dockerfile : Dockerfile
+  image: 149.102.138.184:8082/image-back/aoso
   container_name : front
   volumes:
    - ./:/var/www
@@ -16,9 +17,10 @@ services:
   restart : always
 
  nginx_proxy:
-  build:
-    context : .
-    dockerfile : Dockerfile
+  #build:
+    #context : .
+    #dockerfile : Dockerfile
+  image: 149.102.138.184:8082/image-back/aoso
   container_name: nginx_front
   volumes:
    - ./:/var/www
