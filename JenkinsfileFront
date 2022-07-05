@@ -5,8 +5,11 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
 
-
-CopyFolderFront(
+SonarQubeAngular(
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    ProjectName :'source/DevOpsFront'
+    )
+NexusFront(
     ProjectName :'source/DevOpsFront',
     DestinationFolder :'source/DevOpsFront' ,
     DestinationFolder1 :'/var/lib/jenkins/workspace/Front_main/' ,
@@ -20,12 +23,6 @@ CopyFolderFront(
     dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
     dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/frontend/docker-compose-sonar.yml',
-)
-SonarQubeAngular(
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
-    ProjectName :'source/DevOpsFront'
-    )
-NexusFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     Dockerfile: '/srv/aoso/DevOps/frontend',
     dist: 'dist/DevOpsFront'
