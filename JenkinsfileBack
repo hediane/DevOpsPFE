@@ -3,7 +3,7 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
-Nunit(
+TestUnitaire(
 )
 SonarQubeDotnet(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
