@@ -4,7 +4,9 @@ SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
 TestUnitaire(
+
 )
+
 SonarQubeDotnet(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'source/DevOpsProject',
