@@ -33,7 +33,7 @@ Nexus(
     ProjectPack: 'source/DevOpsProject/',
     Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
     DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
-    tags: '1.1.1'
+    ImageVersion: '1.1.1'
 
 )
 
