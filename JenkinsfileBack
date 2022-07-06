@@ -10,7 +10,8 @@ SonarQubeDotnet(
     ProjectPack1: '/var/jenkins_home/workspace/Back_main/source/DevOpsProject/',
     dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
 )
-CopyFolder(
+
+Nexus(
     ProjectName :'source/DevOpsProject',
     DestinationFolder :'source/DevOpsProject' ,
     DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
@@ -22,8 +23,6 @@ CopyFolder(
     elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
     dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml'
-)
-Nexus(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerLocation:'/usr/local/bin/docker',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',

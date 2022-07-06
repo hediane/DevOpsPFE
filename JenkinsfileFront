@@ -25,7 +25,8 @@ NexusFront(
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/frontend/docker-compose-sonar.yml',
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     Dockerfile: '/srv/aoso/DevOps/frontend',
-    dist: 'dist/DevOpsFront'
+    dist: 'dist/DevOpsFront',
+    ImageVersion: '1.0.0'
 )
 
 DeployFront(
