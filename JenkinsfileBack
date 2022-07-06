@@ -19,6 +19,8 @@ SCM(
     ProjectPack: 'source/DevOpsProject/',
     Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
     DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
+    test:'source/nunitTest',
+    test2:'source/TestProject'
 )
 TestUnitaire(
 
