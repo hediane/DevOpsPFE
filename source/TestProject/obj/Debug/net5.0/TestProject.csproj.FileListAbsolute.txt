@@ -9,7 +9,6 @@ C:\Users\ASUS\Desktop\Aoso\source\TestProject\bin\Debug\net5.0\ref\TestProject.d
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\bin\Debug\net5.0\TestProject.pdb
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\bin\Debug\net5.0\TestProject.Views.dll
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\bin\Debug\net5.0\TestProject.Views.pdb
-C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.csproj.AssemblyReference.cache
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.AssemblyInfoInputs.cache
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.AssemblyInfo.cs
@@ -38,3 +37,4 @@ C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\ref\TestProject.d
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.pdb
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.csproj.CopyComplete
+C:\Users\ASUS\Desktop\Aoso\source\TestProject\obj\Debug\net5.0\TestProject.csproj.AssemblyReference.cache
