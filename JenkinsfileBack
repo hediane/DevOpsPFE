@@ -25,7 +25,7 @@ Nexus(
     DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
     elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
     dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml'
+    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerLocation:'/usr/local/bin/docker',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
