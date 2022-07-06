@@ -14,6 +14,7 @@ namespace DevOpsProject
         {
             CreateHostBuilder(args).Build().Run();
             ConfigureLogging();
+            CreateHost(args);
 
         
         }
