@@ -12,67 +12,57 @@ namespace DevOpsProject
     {
         public static void Main(string[] args)
         {
+            //CreateHostBuilder(args).Build().Run();
+            var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+        var configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddJsonFile($"appsettings.{environment}.json", optional: true)
+            .Build();
+        
+        ConfigureLogging(environment, configuration);
+
+        try
+        {
+            Log.Information("Starting host.");
             CreateHostBuilder(args).Build().Run();
-            ConfigureLogging();
-            CreateHost(args);
+        }
+        catch (Exception ex)
+        {
+            Log.Fatal(ex, "Host failure.");
+        }
+        finally
+        {
+            Log.CloseAndFlush();
+        }
 
         
         }
-    private static void ConfigureLogging()
+     private static void ConfigureLogging(string environment, IConfigurationRoot configuration)
+    {
+        Log.Logger = new LoggerConfiguration()
+            .MinimumLevel.Override("Microsoft", Serilog.Events.LogEventLevel.Information)
+            .Enrich.FromLogContext()
+            .Enrich.WithEnvironmentName()
+            .Enrich.WithMachineName()
+            .WriteTo.Console()
+            .WriteTo.Debug()
+            .WriteTo.Elasticsearch(new ElasticsearchSinkOptions(new Uri(configuration["ElasticSearch:Url"]))
             {
-                var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
-                var configuration = new ConfigurationBuilder()
-                    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-                    .AddJsonFile(
-                        $"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json",
-                        optional: true)
-                    .Build();
-
-                Log.Logger = new LoggerConfiguration()
-                    .Enrich.FromLogContext()
-                    .Enrich.WithMachineName()
-                    .WriteTo.Debug()
-                    .WriteTo.Console()
-                    .WriteTo.Elasticsearch(ConfigureElasticSink(configuration, environment))
-                    .Enrich.WithProperty("Environment", environment)
-                    .ReadFrom.Configuration(configuration)
-                    .CreateLogger();
-            }
-
-            private static ElasticsearchSinkOptions ConfigureElasticSink(IConfigurationRoot configuration, string environment)
-            {
-                return new ElasticsearchSinkOptions(new Uri(configuration["ElasticConfiguration:Uri"]))
-                {
-                    AutoRegisterTemplate = true,
-                    IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower().Replace(".", "-")}-{environment?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
-                };
-            }
-            private static void CreateHost(string[] args)
-                    {
-                        try
-                        {
-                            CreateHostBuilder(args).Build().Run();
-                        }
-                        catch (System.Exception ex)
-                        {
-                            Log.Fatal($"Failed to start {Assembly.GetExecutingAssembly().GetName().Name}", ex);
-                            throw;
-                        }
-                    }
-
-       public static IHostBuilder CreateHostBuilder(string[] args) =>
-	Host.CreateDefaultBuilder(args)
-		.ConfigureWebHostDefaults(webBuilder =>
-		{
-			webBuilder.UseStartup<Startup>();
-		})
-		.ConfigureAppConfiguration(configuration =>
-		{
-			configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-			configuration.AddJsonFile(
-				$"appsettings.{Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT")}.json",
-				optional: true);
-		})
-		.UseSerilog();
+                AutoRegisterTemplate = true,
+                AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv6,
+                IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name!.ToLower().Replace(".", "-")}-{environment?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}"
+            })
+            .ReadFrom.Configuration(configuration)
+            .CreateLogger();
     }
-}
+
+    private static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .UseSerilog()
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
+  
+	
+}}
