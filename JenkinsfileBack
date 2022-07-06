@@ -1,7 +1,7 @@
 @Library('library') _
 
 SCM(
-    scmurl :'https://github.com/hediane/DevOpsPFE.git'
+    scmurl :'https://github.com/hediane/DevOpsPFE.git',
     DestinationFolder :'source/DevOpsProject' ,
     DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
     DestinationFile :'/srv/aoso/DevOps/backend',
