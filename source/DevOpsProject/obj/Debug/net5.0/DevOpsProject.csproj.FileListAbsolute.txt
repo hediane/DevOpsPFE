@@ -210,3 +210,9 @@ C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\obj\Debug\net5.0\DevOpsProject.c
 C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\obj\Debug\net5.0\DevOpsProject.dll
 C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\obj\Debug\net5.0\ref\DevOpsProject.dll
 C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\obj\Debug\net5.0\DevOpsProject.pdb
+C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\bin\Debug\net5.0\DevOpsProject.deps.json
+C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\bin\Debug\net5.0\DevOpsProject.runtimeconfig.json
+C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\bin\Debug\net5.0\DevOpsProject.runtimeconfig.dev.json
+C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\bin\Debug\net5.0\ref\DevOpsProject.dll
+C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\bin\Debug\net5.0\DevOpsProject.pdb
+C:\Users\ASUS\Desktop\Aoso\source\DevOpsProject\obj\Debug\net5.0\DevOpsProject.genruntimeconfig.cache

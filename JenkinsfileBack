@@ -32,8 +32,8 @@ Nexus(
     ProjectName :'source/DevOpsProject',
     ProjectPack: 'source/DevOpsProject/',
     Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
-    DestinationNginx:'/srv/aoso/DevOps/backend/nginx'
-
+    DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
+    tags: '1.1.1'
 
 )
 
