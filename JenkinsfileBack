@@ -28,7 +28,6 @@ Nexus(
     dockerLocation:'/usr/local/bin/docker',
     dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
     dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
-    DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
     ProjectName :'source/DevOpsProject',
     ProjectPack: 'source/DevOpsProject/',
     Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
