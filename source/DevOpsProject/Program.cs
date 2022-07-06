@@ -12,7 +12,10 @@ namespace DevOpsProject
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            //CreateHostBuilder(args).Build().Run();
+            ConfigureLogging();
+            CreateHost(args);
+
         }
         private static void ConfigureLogging()
             {
