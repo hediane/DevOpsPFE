@@ -17,7 +17,7 @@ namespace nunitTest
         {
             //var account = new bankTest.BankAccount(2000);
             account.Add(200);
-            Assert.AreEqual(2200, account.Balance);
+            Assert.AreEqual(2000, account.Balance);
 
         }
 
