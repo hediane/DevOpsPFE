@@ -2,6 +2,23 @@
 
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
+    DestinationFolder :'source/DevOpsProject' ,
+    DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
+    DestinationFile :'/srv/aoso/DevOps/backend',
+    DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
+    DockerfileLocation :'/scripts/Back/Dockerfile',
+    nginxLocation :'/scripts/Back/nginx',
+    elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
+    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
+    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    dockerLocation:'/usr/local/bin/docker',
+    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
+    dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
+    ProjectName :'source/DevOpsProject',
+    ProjectPack: 'source/DevOpsProject/',
+    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
+    DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
 )
 TestUnitaire(
 
