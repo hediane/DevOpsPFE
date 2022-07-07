@@ -6,34 +6,41 @@ SCM(
 )
 
 SonarQubeAngular(
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
-    ProjectName :'source/DevOpsFront'
+    ProjectName :'Front',
+    source :'source/DevOpsFront',
+    SonarQubeTool:'sonarscanner',
+    SonarQubeEnv:'SonarQube',
+    SonarQubeToken:'squ_6479873c456047cc6b816b8de68e3eb6505eb48d'
     )
+    
 NexusFront(
-    ProjectName :'source/DevOpsFront',
-    DestinationFolder :'source/DevOpsFront' ,
+    source :'source/DevOpsFront',
     DestinationFolder1 :'/var/lib/jenkins/workspace/Front_main/' ,
-    DestinationFolder2 :'/var/lib/jenkins/workspace/Front_main/' ,
-    DestinationFile :'/srv/aoso/DevOps/frontend',
-    DestinationProject:'/srv/aoso/DevOps/frontend/DevOpsFront',
+    DestinationFolder :'/var/Aosora/DevOps/Frontend',
+    DestinationProject:'/var/Aosora/DevOps/Frontend/DevOpsFront',
     DockerfileLocation :'/scripts/Front/Dockerfile',
     nginxLocation :'/scripts/Front/nginx',
-    DestinationNginx:'/srv/aoso/DevOps/frontend/nginx',
+    DestinationNginx:'/var/Aosora/DevOps/Frontend/nginx',
     dockerComposeFileLocation:'/scripts/Front/docker-compose-front.yml',
-    dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
+    dockerComposeDestination :'/var/Aosora/DevOps/Frontend/docker-compose-front.yml',
     dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
-    dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/frontend/docker-compose-sonar.yml',
+    dockerComposeSonarQubeDestintion :'/var/Aosora/DevOps/Frontend/docker-compose-sonar.yml',
     dockerComposeLocation:'/usr/local/bin/docker-compose',
-    Dockerfile: '/srv/aoso/DevOps/frontend',
     dist: 'dist/DevOpsFront',
-    ImageVersion: '1.0.0'
+    ImageVersion: '1.0.0',
+    nexusRepository : 'http://149.102.138.184:8082/repository/Aosora',
+    credentiel_id:'NexusSecret'
 )
 
 DeployFront(
+    ImagePull :'149.102.138.184:8082/image-front/aoso',
+    DevServer: 'root@87.106.205.95',
+    DestinationFolder :'/var/Aosora/DevOps/Frontend',
     dockerComposeLocation:'/usr/local/bin/docker-compose',
-    dockerComposeDestination :'/srv/aoso/DevOps/frontend/docker-compose-front.yml',
+    dockerComposeDestination :'/var/Aosora/DevOps/Frontend/docker-compose-front.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose.yml',
     devValidator : 'amani , hediane , aosora'
+
 )
 
 
