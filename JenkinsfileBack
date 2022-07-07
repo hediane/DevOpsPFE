@@ -55,7 +55,7 @@ NexusBack(
     Dockerfile: '/var/Aosora/DevOps/Backend/DevOpsProject',
     DestinationNginx:'/var/Aosora/DevOps/Frontend/nginx',
     nunit:'source/nunitTest',
-    projectTest:'source/TestProject'
+    projectTest:'source/TestProject',
     ImageVersion: '1.1.1',
     nexusRepository : 'http://149.102.138.184:8082/repository/Aosora',
     credentiel_id:'NexusSecret',
