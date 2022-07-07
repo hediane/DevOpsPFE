@@ -53,7 +53,7 @@ NexusBack(
     dockerComposeNexusDestination:'/var/Aosora/DevOps/Backend/docker-compose-nexus.yml',
     dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
     Dockerfile: '/var/Aosora/DevOps/Backend/DevOpsProject',
-    DestinationNginx:'/var/Aosora/DevOps/Frontend/nginx',
+    DestinationNginx:'/var/Aosora/DevOps/Backend/nginx',
     nunit:'source/nunitTest',
     projectTest:'source/TestProject',
     ImageVersion: '1.1.1',
