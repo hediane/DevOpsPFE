@@ -39,12 +39,30 @@ SonarQubeBack(
 )
 
 NexusBack(
-    
+    source :'source/DevOpsProject' ,
+    DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
+    DestinationFolder :'/var/Aosora/DevOps/Backend',
+    DestinationProject:'/var/Aosora/DevOps/Backend/DevOpsProject',
+    DockerfileLocation :'/scripts/Back/Dockerfile',
+    nginxLocation :'/scripts/Back/nginx',
+    elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
+    dockerComposeElasticDestintination :'/var/Aosora/DevOps/Backend/docker-compose-elasticsearch.yml',
+    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
+    dockerComposeLocation:'/usr/local/bin/docker-compose',
+    dockerLocation:'/usr/local/bin/docker',
+    dockerComposeNexusDestination:'/var/Aosora/DevOps/Backend/docker-compose-nexus.yml',
+    dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
+    Dockerfile: '/var/Aosora/DevOps/Backend/DevOpsProject',
+    DestinationNginx:'/var/Aosora/DevOps/Frontend/nginx',
+    nunit:'source/nunitTest',
+    projectTest:'source/TestProject'
     ImageVersion: '1.1.1',
     nexusRepository : 'http://149.102.138.184:8082/repository/Aosora',
     credentiel_id:'NexusSecret',
     ImageBuild : 'image-back/aoso',
-    ImagenginxBuild:'image-nginx-backend/aoso'
+    ImagenginxBuild:'image-nginx-backend/aoso',
+    DestinationProject:'/var/Aosora/DevOps/Backend/DevOpsProject',
+
 
 )
 
