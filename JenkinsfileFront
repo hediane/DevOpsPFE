@@ -4,17 +4,8 @@
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git'
 )
-
-SonarQubeAngular(
-    ProjectName :'Front',
-    source :'source/DevOpsFront',
-    SonarQubeTool:'sonarscanner',
-    SonarQubeEnv:'SonarQube',
-    SonarQubeToken:'squ_6479873c456047cc6b816b8de68e3eb6505eb48d'
-    )
-    
-NexusFront(
-    source :'source/DevOpsFront',
+BuildApplicationFront(
+   source :'source/DevOpsFront',
     DestinationFolder1 :'/var/lib/jenkins/workspace/Front_main/' ,
     DestinationFolder :'/var/Aosora/DevOps/Frontend',
     DestinationProject:'/var/Aosora/DevOps/Frontend/DevOpsFront',
@@ -26,8 +17,21 @@ NexusFront(
     dockerComposeSonarQube :'/scripts/SonarQube/docker-compose-sonar.yml',
     dockerComposeSonarQubeDestintion :'/var/Aosora/DevOps/Frontend/docker-compose-sonar.yml',
     dockerComposeLocation:'/usr/local/bin/docker-compose',
+    
+)
+SonarQubeFront(
+    ProjectName :'Front',
+    source :'source/DevOpsFront',
+    SonarQubeTool:'sonarscanner',
+    SonarQubeEnv:'SonarQube',
+    SonarQubeToken:'squ_6479873c456047cc6b816b8de68e3eb6505eb48d'
+    )
+    
+NexusFront(
+    
     dist: 'dist/DevOpsFront',
     ImageVersion: '1.0.0',
+    ImageBuild : 'image-front/aoso',
     nexusRepository : 'http://149.102.138.184:8082/repository/Aosora',
     credentiel_id:'NexusSecret'
 )

@@ -2,64 +2,58 @@
 
 SCM(
     scmurl :'https://github.com/hediane/DevOpsPFE.git',
-    DestinationFolder :'source/DevOpsProject' ,
+)
+BuildApplicationBack(
+    source :'source/DevOpsProject' ,
     DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
-    DestinationFile :'/srv/aoso/DevOps/backend',
-    DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
+    DestinationFolder :'/var/Aosora/DevOps/Backend',
+    DestinationProject:'/var/Aosora/DevOps/Backend/DevOpsProject',
     DockerfileLocation :'/scripts/Back/Dockerfile',
     nginxLocation :'/scripts/Back/nginx',
     elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
+    dockerComposeElasticDestintination :'/var/Aosora/DevOps/Backend/docker-compose-elasticsearch.yml',
     dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerLocation:'/usr/local/bin/docker',
-    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
+    dockerComposeNexusDestination:'/var/Aosora/DevOps/Backend/docker-compose-nexus.yml',
     dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
-    ProjectName :'source/DevOpsProject',
-    ProjectPack: 'source/DevOpsProject/',
-    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
-    DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
-    test:'source/nunitTest',
-    test2:'source/TestProject'
+    Dockerfile: '/var/Aosora/DevOps/Backend/DevOpsProject',
+    DestinationNginx:'/var/Aosora/DevOps/Frontend/nginx',
+    nunit:'source/nunitTest',
+    projectTest:'source/TestProject'
 )
 TestUnitaire(
-
+    sln : 'source/DevOpsProject/DevOpsProject.sln'
 )
 
-SonarQubeDotnet(
+SonarQubeBack(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
-    ProjectName :'source/DevOpsProject',
+    ProjectName :'Back',
     ProjectPack1: '/var/jenkins_home/workspace/Back_main/source/DevOpsProject/',
     dockerComposeSonarQube :'scripts/sonarQube/docker-compose-sonar.yml',
+    SonarQubeTool:'SonarScanner for MSBuild',
+    SonarQubeEnv:'SonarQube',
+    SonarQubeToken:'squ_6479873c456047cc6b816b8de68e3eb6505eb48d'
 )
 
-Nexus(
-    DestinationFolder :'source/DevOpsProject' ,
-    DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
-    DestinationFile :'/srv/aoso/DevOps/backend',
-    DestinationProject:'/srv/aoso/DevOps/backend/DevOpsProject',
-    DockerfileLocation :'/scripts/Back/Dockerfile',
-    nginxLocation :'/scripts/Back/nginx',
-    elasticsearch :'/scripts/Back/elasticsearch/docker-compose-elasticsearch.yml',
-    dockerComposeElasticDestintination :'/srv/aoso/DevOps/backend/docker-compose-elasticsearch.yml',
-    dockerComposeFileLocation:'/scripts/Back/docker-compose-back.yml',
-    dockerComposeLocation:'/usr/local/bin/docker-compose',
-    dockerLocation:'/usr/local/bin/docker',
-    dockerComposeNexusDestination:'/srv/aoso/DevOps/backend/docker-compose-nexus.yml',
-    dockerComposeNexus:'/scripts/nexus/docker-compose-nexus.yml',
-    ProjectName :'source/DevOpsProject',
-    ProjectPack: 'source/DevOpsProject/',
-    Dockerfile: '/srv/aoso/DevOps/backend/DevOpsProject',
-    DestinationNginx:'/srv/aoso/DevOps/backend/nginx',
-    ImageVersion: '1.1.1'
-
-)
-
-DockerBuild(
-    dockerComposeLocation:'/usr/bin/docker-compose',
-    dockerComposeDestination :'/srv/aoso/DevOps/backend/docker-compose-back.yml',
-    devValidator : 'amani , hediane , aosora'
+NexusBack(
     
+    ImageVersion: '1.1.1',
+    nexusRepository : 'http://149.102.138.184:8082/repository/Aosora',
+    credentiel_id:'NexusSecret',
+    ImageBuild : 'image-back/aoso',
+    ImagenginxBuild:'image-nginx-backend/aoso'
+
 )
 
+DeployBack(
+    ImagePull :'149.102.138.184:8082/image-back/aoso',
+    DevServer: 'root@87.106.205.95',
+    dockerComposeLocation:'/usr/bin/docker-compose',
+    dockerComposeDestination :'/var/Aosora/DevOps/Backend/docker-compose-back.yml',
+    devValidator : 'amani , hediane , aosora',
+    DestinationFolder :'/var/Aosora/DevOps/Backend',
+    url_Elasticsearch_Kibana:'http://149.102.138.184:5601',
+    ImageNginxPull : '149.102.138.184:8082/image-nginx-backend/aoso'
 
+)
