@@ -27,6 +27,8 @@ TestUnitaire(
 )
 
 SonarQubeBack(
+    sln : 'source/DevOpsProject/DevOpsProject.sln',
+    source :'source/DevOpsProject' ,
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     ProjectName :'Back',
     ProjectPack1: '/var/jenkins_home/workspace/Back_main/source/DevOpsProject/',
