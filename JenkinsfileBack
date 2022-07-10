@@ -5,7 +5,7 @@ SCM(
 )
 BuildApplicationBack(
     source :'source/DevOpsProject' ,
-    DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
+    DestinationFolder1 :'/var/lib/jenkins/workspace/BackAoso_main/' ,
     DestinationFolder :'/var/Aosora/DevOps/Backend',
     DestinationProject:'/var/Aosora/DevOps/Backend/DevOpsProject',
     DockerfileLocation :'/scripts/Back/Dockerfile',
@@ -40,7 +40,7 @@ SonarQubeBack(
 
 NexusBack(
     source :'source/DevOpsProject' ,
-    DestinationFolder1 :'/var/lib/jenkins/workspace/Back_main/' ,
+    DestinationFolder1 :'/var/lib/jenkins/workspace/BackAoso_main/' ,
     DestinationFolder :'/var/Aosora/DevOps/Backend',
     DestinationProject:'/var/Aosora/DevOps/Backend/DevOpsProject',
     DockerfileLocation :'/scripts/Back/Dockerfile',

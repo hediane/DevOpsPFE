@@ -29,7 +29,11 @@ SonarQubeFront(
     )
     
 NexusFront(
-    
+    DestinationFolder :'/var/Aosora/DevOps/Frontend',
+    DestinationProject:'/var/Aosora/DevOps/Frontend/DevOpsFront',
+    nginxLocation :'/scripts/Front/nginx',
+    dockerComposeFileLocation:'/scripts/Front/docker-compose-front.yml',
+    DockerfileLocation :'/scripts/Front/Dockerfile',
     dist: 'dist/DevOpsFront',
     ImageVersion: '1.0.0',
     ImageBuild : 'image-front/aoso',
