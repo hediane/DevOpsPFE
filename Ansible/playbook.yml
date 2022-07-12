@@ -2,7 +2,7 @@
   tasks:
       - name: Copy Docker-compose  
         copy:
-        src: /var/Aosora/DevOps/Backend/docker-compose-back.yml
-        dest: /var/Aosora/DevOps/Backend/
+            src: /var/Aosora/DevOps/Backend/docker-compose-back.yml
+            dest: /var/Aosora/DevOps/Backend/
       - name: Deploy
         command: Docker-compose -f /var/Aosora/DevOps/Backend/docker-compose-back.yml up -d
