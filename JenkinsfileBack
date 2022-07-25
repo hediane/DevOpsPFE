@@ -76,5 +76,4 @@ DeployBack(
     ImageNginxPull : '149.102.138.184:8082/image-nginx-backend/aoso',
     ansible-playbook : 'Ansible/playbook.yml',
     ansible-inventory :'Ansible/inventory/dev.ini'
-
 )
