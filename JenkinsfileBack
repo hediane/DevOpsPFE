@@ -74,7 +74,7 @@ DeployBack(
     DestinationFolder :'/var/Aosora/DevOps/Backend',
     url_Elasticsearch_Kibana:'http://149.102.138.184:5601',
     ImageNginxPull : '149.102.138.184:8082/image-nginx-backend/aoso',
-    ansible-playbook: 'Ansible/playbook.yml',
-    ansible-inventory:'Ansible/inventory/dev.ini'
+    ansible-playbook : 'Ansible/playbook.yml',
+    ansible-inventory :'Ansible/inventory/dev.ini'
 
 )
