@@ -61,8 +61,6 @@ NexusBack(
     credentiel_id:'NexusSecret',
     ImageBuild : 'image-back/aoso',
     ImagenginxBuild:'image-nginx-backend/aoso',
-
-
 )
 
 DeployBack(
