@@ -69,7 +69,7 @@ DeployBack(
     DevServer2: 'root@38.242.234.175',
     dockerComposeLocation:'/usr/bin/docker-compose',
     dockerComposeDestination :'/var/Aosora/DevOps/Backend/docker-compose-back.yml',
-    devValidator : 'amani , hediane ',
+    devValidator : 'amani , hediane , aosora',
     DestinationFolder :'/var/Aosora/DevOps/Backend',
     url_Elasticsearch_Kibana:'http://149.102.138.184:5601',
     ImageNginxPull : '149.102.138.184:8082/image-nginx-backend/aoso',
