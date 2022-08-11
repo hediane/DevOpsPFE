@@ -56,7 +56,7 @@ NexusBack(
     DestinationNginx:'/var/Aosora/DevOps/Backend/nginx',
     nunit:'source/nunitTest',
     projectTest:'source/TestProject',
-    ImageVersion: '1.1.1',
+    ImageVersion: '2.2.1',
     nexusRepository : 'http://149.102.138.184:8082/repository/Aosora',
     credentiel_id:'NexusSecret',
     ImageBuild : 'image-back/aoso',

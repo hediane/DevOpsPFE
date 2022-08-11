@@ -1,10 +1,7 @@
 version: '3.7'
 services:
  backend:
-  #build:
-   #context : ./DevOpsProject
-   #dockerfile : Dockerfile
-  image: 149.102.138.184:8082/image-back/aoso
+  image: 149.102.138.184:8082/image-back/aoso:2.2.1
   container_name : back
   volumes:
       - ./:/var/www
@@ -15,10 +12,7 @@ services:
   restart : always
 
  nginx_pro:
-  #build:
-    #context : ./nginx
-    #dockerfile : Dockerfile
-  image: 149.102.138.184:8082/image-nginx-backend/aoso
+  image: 149.102.138.184:8082/image-nginx-backend/aoso:2.2.1
   container_name: nginx_Back
   volumes:
    - ./:/var/www
