@@ -4,7 +4,7 @@ services:
   #build:
    #context : .
    #dockerfile : Dockerfile
-  image: 149.102.138.184:8082/image-front/aoso:2.1.0
+  image: 149.102.138.184:8082/image-front/aoso:1.0.0
   container_name : front
   volumes:
    - ./:/var/www
