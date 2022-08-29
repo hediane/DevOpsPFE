@@ -49,7 +49,9 @@ DeployFront(
     dockerComposeLocation:'/usr/local/bin/docker-compose',
     dockerComposeDestination :'/var/Aosora/DevOps/Frontend/docker-compose-front.yml',
     dockerComposeSonarQubeDestintion :'/srv/aoso/DevOps/docker-compose.yml',
-    devValidator : 'amani , hediane , aosora'
+    devValidator : 'amani , hediane , aosora',
+    ansibleplaybook : 'Ansible/playbook.yml',
+    ansibleinventory :'Ansible/inventory/dev.ini'
 
 )
 

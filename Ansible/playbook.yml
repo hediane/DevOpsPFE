@@ -6,4 +6,8 @@
             dest: /var/Aosora/DevOps/Backend/
       - name: Deploy
         command: docker-compose -f /var/Aosora/DevOps/Backend/docker-compose-back.yml up -d
+- hosts: front
+  tasks:
+      - name: Deploy partie frontend
+        command: docker-compose -f /var/Aosora/DevOps/Frontend/docker-compose-front.yml up -d
        
