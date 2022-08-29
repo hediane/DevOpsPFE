@@ -8,3 +8,4 @@
         command: docker-compose -f /var/Aosora/DevOps/Backend/docker-compose-back.yml up -d
         become: true
         become_user: root
+        become_method: su
